@@ -1,0 +1,55 @@
+/* Apply border-box sizing to all elements */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+  }
+  
+  /* Header styles */
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  /* Gallery container styles */
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    /* Allow items to wrap onto multiple lines if necessary */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* Set the gap between flex items */
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  /* Image styles within the gallery */
+  .gallery img {
+    width: 100%;
+    /* Set a maximum width for the images */
+    max-width: 350px;
+    height: 300px;
+    /* Scale and crop the image to fit the container */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Pseudo-element style for additional spacing */
+  .gallery::after {
+    /* Add an empty content to the pseudo-element */
+    content: "";
+    width: 350px;
+  }
+  
